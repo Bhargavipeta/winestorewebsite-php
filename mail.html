@@ -1,0 +1,137 @@
+<!-- <?php
+        if ($_SERVER['REQUEST_METHOD']!="POST") exit();
+        $wine_name=$_POST['wine_name'];
+        $wine_type=$_POST['wine_type'];
+       
+        
+        
+        $showTable=" SELECT * FROM wine where wine_name='$wine_name' and wine_type='$wine_type' " ;
+        $result=mysqli_query($link,$showTable) or die(mysqli_error($link));
+        
+        echo "<table border cellpadding=4>";
+        echo "<tr>";
+        echo "<th>wine_id</th>";
+        echo "<th>wine_name</th>";
+        echo "<th>wine_type</th>";
+        echo "<th>year</th>";
+        echo "<th>winery_id</th>";
+        echo "<th>description</th>";
+        echo "</tr>";
+        
+       
+        while($info = mysqli_fetch_array($result))
+            {
+                echo "<tr><td>".$info['wine_id'] . "</td>";
+                echo "<td>".$info['wine_name'] . "</td>";
+                echo "<td>".$info['wine_type'] . "</td>";
+                echo "<td>".$info['year'] . "</td>";
+                echo "<td>".$info['winery_id'] . "</td>";
+                echo "<td>".$info['description'] . "</td></tr>";
+                
+            }
+        echo "</table>";
+        $winery_name=$_POST['winery_name'];
+        $showTable="SELECT * FROM winery where winery_name='$winery_name' ";        
+       $result=mysqli_query($link,$showTable) or die(mysqli_error($link));
+       
+        echo "<table border cellpadding=4>";
+        echo "<tr>";
+        echo "<th>winery_id</th>";
+        echo "<th>winery_name</th>";
+        echo "<th>region_id</th>";
+        echo "</tr>";
+        
+        while($info = mysqli_fetch_array($result))
+            {
+                echo "<tr><td>".$info['winery_id'] . "</td>";
+                echo "<td>".$info['winery_name'] . "</td>";
+                echo "<td>".$info['region_id'] . "</td>";
+            }
+
+        echo "</table>";
+
+      $firstname=$_POST['firstname'];
+       $showTable="SELECT * FROM customer where firstname='$firstname' ";        
+       $result=mysqli_query($link,$showTable) or die(mysqli_error($link));
+       
+        echo "<table border cellpadding=4>";
+        echo "<tr>";
+        echo "<th>cust_id</th>";
+        echo "<th>surname</th>";
+        echo "<th>firstname</th>";
+        echo "<th>initial</th>";
+        echo "<th>title_id</th>";
+        echo "<th>address</th>";
+        echo "<th>city</th>";
+        echo "<th>state</th>";
+        echo "<th>zipcode</th>";
+        echo "<th>country_id</th>";
+        echo "<th>phone</th>";
+        echo "<th>birth_date</th>";
+        echo "</tr>";
+
+        while($info = mysqli_fetch_array($result))
+            {
+                echo "<tr><td>".$info['cust_id'] . "</td>";
+                echo "<td>".$info['surname'] . "</td>";
+                echo "<td>".$info['firstname'] . "</td>";
+                echo "<td>".$info['initial'] . "</td>";
+                echo "<td>".$info['title_id'] . "</td>";
+                echo "<td>".$info['address'] . "</td>";
+                echo "<td>".$info['city'] . "</td>";
+                echo "<td>".$info['state'] . "</td>";
+                echo "<td>".$info['zipcode'] . "</td>";
+                echo "<td>".$info['country_id'] . "</td>";
+                echo "<td>".$info['phone'] . "</td>";
+                echo "<td>".$info['birth_date'] . "</td>";
+            }
+        echo "</table>";
+        
+    ?>
+    
+    
+</body>
+</html>
+<!-- <div id="contents">
+    <div class="box">
+        <div>
+            <div class="body">
+                <form method="post" action="ResultsWine.php" onSubmit="return validateForm( this );">
+                    <h1> In here you can view the list of wine and winery names their region</h1>
+                    <p style="color:black"><input type="text" placeholder="Enter your email" id="email" name="email" pattern=".+@mail\.bradley\.edu" /></p>
+                    <p style="color:black"><label>Select the Wine Type </label>
+                    <input type="checkbox" name="winetypeid" value="6"> Red
+                    <input type="checkbox" name="winetypeid" value="5"> White
+                    <input type="checkbox" name="winetypeid" value="4"> Sweet
+                    </p>                        
+                    <p style="color:black"><input type="number" min="1960" max="2010" id="year" step="1" name="year" placeholder="Enter the year for Wine" onblur="validateYear()"required/><span id="demo"></span></p>
+                    <input class="auto-style4" name="wineSortQuery" type="submit" value="Check the wine details" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function validateYear() {
+    const inpObj = document.getElementById("year");
+    if (!inpObj.checkValidity()) {
+        document.getElementById("demo").innerHTML = inpObj.validationMessage;
+    } else {
+        document.getElementById("demo").innerHTML = valid;
+    } 
+    } 
+</script> -->
+
+    
+        
+       
+       
+        
+    <a href="testingemail.php">search </a>
+    </div>
+    
+    
+</body>
+</html>
+ -->
